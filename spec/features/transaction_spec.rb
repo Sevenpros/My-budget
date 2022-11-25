@@ -9,14 +9,12 @@ RSpec.describe 'Taransaction', type: :feature do
   describe 'index page' do
     before(:each) do
       sign_in user
-      visit "/categories/#{category.id}"
+      visit "/categories/#{category.id}/transactions"
     end
 
     it 'I can see the transaction name ' do
       expect(page).to have_content 'Transaction'
     end
-    it 'I can see the transaction amount' do
-      expect(page).to have_content 'Amount'
-    end
+  
   end
 end
