@@ -1,0 +1,16 @@
+ <% if current_user %>
+<div class="w-full dark:text-white">
+  <div >
+    <nav style="background: #3778c2; min-height: 70px; display: flex; padding: 0 24px; align-items: center; justify-content: space-between;">
+          <div class="">
+            <%=link_to "<", 'javascript:history.back()', style: "color: white; text-decoration: none;font-weight: bolder;font-size: 8vw" %>
+          </div>
+          <div class="" >
+            <%=link_to "Logout", destroy_user_session_path, method: :delete, style: "color: white; text-decoration: none;font-weight: 400;font-size: 5vw" %>
+          </div>
+        
+    </nav>
+  </div>
+</div>
+<% end %>
+

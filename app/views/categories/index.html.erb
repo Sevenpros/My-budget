@@ -1,0 +1,59 @@
+<div style="text-align: center; padding: 8px 0">
+<h1>Categories</h1>
+</div>
+
+<div id="categories">
+  <% @categories.each do |category| %>
+  <% total_amount = Transaction.where(category_id: category.id).sum(:amouunt)%>
+    <div id="<%= dom_id category %>" class="mt-2"
+    style="min-height: 90px;
+    box-shadow: 0 0 15px 0 #888;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+
+
+   
+    ">
+    <a href="/categories/<%= category.id%>/transactions" 
+    style="text-decoration: none;
+    color: #434b54;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ">
+       <p style="width: 15vw;height: 15vw; border: 1px solid">
+        <%= image_tag category.icon_url,style: "width: 100%; height: auto" if category.icon%>
+      </p>
+
+      <p>
+        <%= category.name %>
+      </p>
+
+      
+      <p>
+         <%= number_to_currency(total_amount, :unit => "$")%> 
+      </p></a>
+    </div>
+ 
+  <% end %>
+</div>
+
+<div style="
+min-height: 60px;
+border: 1px solid;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #5fb523;
+padding: 12px;
+margin-top: 5px;
+">
+<a href= "/categories/new" style="
+text-decoration: none;
+color: white;
+padding: 8px 24px;
+border: 1px solid white;
+">New Category
+</a></div>
