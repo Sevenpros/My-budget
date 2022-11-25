@@ -4,5 +4,5 @@ class Category < ApplicationRecord
 
   include ImageUploader::Attachment(:icon)
   validates :name, presence: true
-  #   validates :icon, presence: true, length: { maximum: 300 }
+  validates :icon, presence: true
 end

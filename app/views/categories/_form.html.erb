@@ -22,7 +22,8 @@
       <%= form.hidden_field :icon, value: category.cached_icon_data %> 
     <%= form.file_field :icon, class: "form-control"%>
   </div>
-
+    <p class="notice"><%= notice%></p>
+    <p class="alert"><%= alert%></p>
   <div>
     <%= form.submit "Save Category", class: "btn btn-primary mt-3" %>
   </div>
