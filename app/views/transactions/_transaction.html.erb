@@ -5,11 +5,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
     ">
+  <p>
+    <b><%= transaction.created_at.to_date %></b>
+  </p>
   <p>
     <b><%= transaction.name %></b>
   </p>
-
+  
   <p>
     <strong>
     <%= number_to_currency(transaction.amouunt, :unit => "$")%> 

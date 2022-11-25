@@ -40,7 +40,8 @@
   <% end %>
 </div>
 
-<div style="
+<button style="
+width: 100%;
 min-height: 60px;
 border: 1px solid;
 display: flex;
@@ -49,11 +50,14 @@ justify-content: center;
 background: #5fb523;
 padding: 12px;
 margin-top: 5px;
+position: fixed;
+bottom: 0;
+left: 0;
 ">
-<a href= "/categories/new" style="
+<%= link_to "New Category", new_category_path, style: "
 text-decoration: none;
 color: white;
 padding: 8px 24px;
 border: 1px solid white;
-">New Category
-</a></div>
+background: #5fb523;
+"%></button>
