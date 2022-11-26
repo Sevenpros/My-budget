@@ -23,22 +23,4 @@ RSpec.describe 'Categories', type: :request do
       expect(response.body).to include('Categories')
     end
   end
-  context 'GET /show' do
-    before(:each) do
-      sign_in user
-      get "/categories/#{category.id}"
-    end
-    it 'categories show is successful' do
-      expect(response).to have_http_status(:ok)
-    end
-    it 'Renders correct template' do
-      expect(response).to render_template(:show)
-    end
-    it 'Does not render wrong template' do
-      expect(response).to_not render_template(:index)
-    end
-    it 'Response body includes correct placeholder text' do
-      expect(response.body).to include('CATEGORY')
-    end
-  end
 end
