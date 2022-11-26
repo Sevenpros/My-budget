@@ -15,6 +15,5 @@ RSpec.describe 'Taransaction', type: :feature do
     it 'I can see the transaction name ' do
       expect(page).to have_content 'Transaction'
     end
-  
   end
 end

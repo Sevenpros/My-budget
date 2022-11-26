@@ -23,5 +23,4 @@ RSpec.describe 'Categories', type: :request do
       expect(response.body).to include('Categories')
     end
   end
-  
 end

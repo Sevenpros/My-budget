@@ -74,8 +74,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://infinite-hollows-88653.herokuapp.com/)
 
-- [Live Demo Link](https://www.loom.com/share/85daa87933f14b338f06c85aa9eb1e0c)
+- [Video Demo](https://www.loom.com/share/1a3b1c96fd1743b9890f601bba24106a)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

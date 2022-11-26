@@ -24,5 +24,4 @@ RSpec.describe 'Transactions', type: :request do
       expect(response.body).to include('Transactions')
     end
   end
- 
 end
