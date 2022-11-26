@@ -1,0 +1,47 @@
+<div style="
+min-height: 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+border-bottom: 1px solid;
+">
+<strong>
+<%= @category.name%>
+</strong>
+<strong>
+<% total_amount = Transaction.where(category_id: @category.id).sum(:amouunt)%>
+<%= number_to_currency(total_amount, :unit => "$")%>
+</strong>
+</div>
+<div style="text-align: center; padding: 8px 0">
+<h1>Transactions</h1>
+</div>
+<div id="transactions">
+  <% @transactions.includes(:category).each do |transaction| %>
+    <%= render transaction %>
+    <p>
+      <%# <%= link_to "Show this transaction", category_transaction_path(transaction.category_id,transaction) %>
+    </p>
+  <% end %>
+</div>
+<button style="
+min-height: 60px;
+width: 100%;
+border: 1px solid;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #5fb523;
+padding: 12px;
+position: fixed;
+bottom: 0;
+left: 0;
+">
+<a href= "/categories/<%= @category.id%>/transactions/new" style="
+text-decoration: none;
+color: white;
+padding: 8px 24px;
+border: 1px solid white;
+">New transaction
+</a></button>

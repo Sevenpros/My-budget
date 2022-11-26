@@ -1,0 +1,23 @@
+<div id="<%= dom_id transaction %>" class="mt-2"
+    style="min-height: 90px;
+    box-shadow: 0 0 15px 0 #888;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    ">
+  <p>
+    <b><%= transaction.created_at.to_date %></b>
+  </p>
+  <p>
+    <b><%= transaction.name %></b>
+  </p>
+  
+  <p>
+    <strong>
+    <%= number_to_currency(transaction.amouunt, :unit => "$")%> 
+    </strong>
+  </p>
+
+</div>
